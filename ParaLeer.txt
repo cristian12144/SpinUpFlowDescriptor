@@ -1,0 +1,19 @@
+A través de este grupo de programas se encuentra la solución del modelo ferrohidrodinámico, suponiendo campos de baja amplitud. Con este grupo de programas se obtienen los perfiles de velocidad lineal y angular, con valores de SNR de 10, 15, 20, 30 y 40 dB. Geometría de estudio: Contenedor cilíndrico.
+
+El programa principal, el que se debe correr para obtener los perfiles, es:
+
+Cyli_WGN_LOW(nder,ndet,ndt,tf)
+
+Parámetros para correr el programa: Cyli_WGN(30, 100, 1000, 2*pi)
+
+nder: número de nodos en la coordenada radial,
+ndet: número de nodos en la coordenada angular,
+ndt : número de nodos de la variable tiempo,
+tf  : tiempo adimensional de simulación.
+
+NOTA: En el programa principal, a diferencia de los programas principales enviados anteriormente, ya no se debe especificar, como parámetro de entrada, el valor de maxIter (número de iteraciones máximas), ya que para campos magnético de baja amplitud no se requiere.
+
+
+
+
+
