@@ -1,17 +1,16 @@
-A través de este grupo de programas se encuentra la solución del modelo ferrohidrodinámico, suponiendo campos de baja amplitud. Con este grupo de programas se obtienen los perfiles de velocidad lineal y angular, con valores de SNR de 10, 15, 20, 30 y 40 dB. Geometría de estudio: Contenedor cilíndrico.
+In the Matlab prompt, this must be given to the software in the following order: 
 
-El programa principal, el que se debe correr para obtener los perfiles, es:
+>> SpinUpFlowDescriptor(nder,ndeθ,ndt ,tf,maxIterT,varargin)
 
-Cyli_WGN_LOW(nder,ndet,ndt,tf)
+where varargin relates to two optional inputs, considered as follows: 
 
-Parámetros para correr el programa: Cyli_WGN(30, 100, 1000, 2*pi)
+a. If no argument is given (i.e. length(varargin) = 0), the software carries out a    simulation with default parameters. Such a scenario considers magnetic field    densities BmT = [3.4 4.5 5.6 6.8 7.9 9.0 10.1 11.3] mT, and the properties of      ferrofluid WBF1 (see Table 1 of the article),
 
-nder: número de nodos en la coordenada radial,
-ndet: número de nodos en la coordenada angular,
-ndt : número de nodos de la variable tiempo,
-tf  : tiempo adimensional de simulación.
+b. In the case of a single input, it must be a vector of magnetic field densities     (in mT) for running the simulation,
 
-NOTA: En el programa principal, a diferencia de los programas principales enviados anteriormente, ya no se debe especificar, como parámetro de entrada, el valor de maxIter (número de iteraciones máximas), ya que para campos magnético de baja amplitud no se requiere.
+c. Should there be two arguments, the first one must relate to the aforementioned    vector, whilst the other one must be a structure with the parameters of the    ferrofluid that will be simulated,
+
+d. Finally, in the case there are three or more arguments, only the first two are    considered and must comply with the requirements described in the previous      item.
 
 
 
